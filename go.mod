@@ -5,6 +5,7 @@ go 1.18
 require (
 	github.com/aws/aws-sdk-go-v2/config v1.18.4
 	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.17.8
+	github.com/davecgh/go-spew v1.1.0
 )
 
 require (

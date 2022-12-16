@@ -1,4 +1,5 @@
 download-dynamodb-content
 dddownload/dddownload
+ddupload/ddupload
 *.json
 .idea
