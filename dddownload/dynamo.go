@@ -42,6 +42,7 @@ func AsyncScanTable(ddb *dynamodb.Client, tableName *string) (chan map[string]ty
 				close(outCh)
 				return
 			}
+			maybeStartKey = response.LastEvaluatedKey
 		}
 	}()
 	return outCh, errCh
