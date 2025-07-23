@@ -5,11 +5,12 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/aws/aws-sdk-go-v2/service/dynamodb/types"
 	"log"
 	"os"
 	"reflect"
 	"strconv"
+
+	"github.com/aws/aws-sdk-go-v2/service/dynamodb/types"
 )
 
 func recursivelyHandleValue(valueMap map[string]interface{}) (types.AttributeValue, error) {

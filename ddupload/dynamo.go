@@ -35,6 +35,7 @@ func AsyncDynamoWriter(ddb *dynamodb.Client, tableName string, input chan map[st
 			if rec != nil {
 				cache = append(cache, rec)
 				if len(cache) == 25 {
+					log.Printf("INFO Committing bulk of records")
 					err := commitInBulk(ddb, tableName, &cache)
 					if err != nil {
 						errCh <- err
